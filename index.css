@@ -2,7 +2,7 @@
    1. VARIÁVEIS GERAIS & RESET
 ========================================= */
 :root {
-    /* Cores Globais */
+    /* Cores */
     --bg-deep: #050505;
     --neon-blue: #00f3ff;
     --neon-gold: #ffd700;
@@ -42,7 +42,7 @@ header {
 }
 
 .logo-container { display: flex; align-items: center; gap: 15px; position: relative; }
-.logo-shield { font-size: 2rem; color: var(--neon-gold); text-shadow: 0 0 15px var(--neon-gold); }
+.logo-shield { font-size: 2rem; color: var(--); text-shadow: 0 0 15px var(--neon-purple); }
 .logo-text h1 { font-size: 1.2rem; font-weight: 700; letter-spacing: 3px; color: #fff; }
 .logo-text h2 { font-size: 1rem; color: var(--neon-purple); letter-spacing: 2px; }
 
@@ -73,13 +73,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 }
 .nav-btn:hover { color: var(--neon-purple); border: 1px solid var(--neon-purple); box-shadow: 0 0 15px rgba(199,106,252,0.4); }
 
-/* Glow Circle Atrás do Logo */
-.glow-circle-mini {
-    width: 60px; height: 60px; background: rgba(199,106,252, 0.1); border-radius: 50%;
-    position: absolute; top: 50%; left: 15px; transform: translateY(-50%);
-    box-shadow: 0 0 30px 10px rgba(199,106,252,0.6); z-index: -1; animation: pulseCircle 4s infinite;
-}
-@keyframes pulseCircle { 0%, 100% { opacity: 0.5; transform: translateY(-50%) scale(0.8); } 50% { opacity: 1; transform: translateY(-50%) scale(1.1); } }
+
 
 /* =========================================
    3. HERO SECTION (HOME)
@@ -130,7 +124,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 /* =========================================
-   4. SEÇÃO FORMAÇÃO (TECH HUD - VERSÃO ROXO/AZUL)
+   4. SEÇÃO FORMAÇÃO
 ========================================= */
 .content-section {
     padding: 100px 10%; display: flex; flex-direction: column; align-items: center;
@@ -138,7 +132,6 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 }
 
 #formacao {
-    /* Mantive sua imagem de fundo */
     background-image: linear-gradient(rgba(2, 10, 20, 0.85), rgba(2, 10, 20, 0.9)), url('image_3cd76b.jpg'); 
     background-size: cover; background-position: center; background-attachment: fixed;
     border-top: 1px solid rgba(0, 243, 255, 0.1);
@@ -150,15 +143,14 @@ nav ul { list-style: none; display: flex; gap: 20px; }
     box-shadow: 0 0 20px 5px rgba(199,106,252,0.6); margin: 0 15px;
 }
 
-/* TÍTULO AGORA EM BRANCO/ROXO (Sem Amarelo) */
 .section-title.glow-gold {
     font-size: 2.5rem; text-transform: uppercase; letter-spacing: 3px;
-    color: #fff; /* Cor base branca */
-    background: none; /* Remove o gradiente dourado */
+    color: #fff; 
+    background: none; 
     -webkit-text-fill-color: #fff;
     text-shadow: 
         0 0 10px var(--neon-purple),
-        0 0 20px var(--neon-purple); /* Brilho Roxo */
+        0 0 20px var(--neon-purple); 
 }
 
 .grid-container {
@@ -179,7 +171,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
     position: absolute; left: 50%; transform: translateX(-50%); width: 60%; height: 4px; z-index: 2;
     transition: width 0.4s ease, box-shadow 0.4s ease;
 }
-/* AQUI MUDOU: De Gold para Purple */
+
 .tech-border-top { top: 0; background: linear-gradient(90deg, transparent, var(--neon-purple), transparent); box-shadow: 0 0 10px var(--neon-purple); }
 .tech-border-bottom { bottom: 0; background: linear-gradient(90deg, transparent, var(--neon-blue), transparent); box-shadow: 0 0 10px var(--neon-blue); }
 
@@ -195,7 +187,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
     border-radius: 8px; background: rgba(0, 0, 0, 0.4); box-shadow: 0 0 15px rgba(0, 243, 255, 0.05); transition: 0.4s;
 }
 
-/* HOVER EFFECTS: Agora Roxo (Purple) em vez de Gold */
+
 .tech-card:hover .tech-icon { 
     color: var(--neon-purple); 
     border-color: var(--neon-purple); 
@@ -204,16 +196,16 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 }
 
 .tech-info h3 { color: #fff; font-size: 1.1rem; margin-bottom: 5px; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
-/* Texto fica roxo no hover */
+
 .tech-card:hover h3 { color: var(--neon-purple); text-shadow: 0 0 10px var(--neon-purple); }
 
 .tech-info .institution { color: #8892b0; font-size: 0.85rem; font-family: 'Share Tech Mono', monospace; }
 
 /* =========================================
-   5. SEÇÃO PROJETOS (NEON STYLE)
+   5. SEÇÃO PROJETOS
 ========================================= */
 #projetos {
-    background-color: #030712; /* Fundo sólido */
+    background-color: #030712; 
     background-image: linear-gradient(rgba(0, 247, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 247, 255, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
@@ -284,7 +276,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 .cyber-card.green .cyber-button:hover { background: var(--neon-green); color: #000; box-shadow: 0 0 30px var(--neon-green); }
 
 /* =========================================
-   6. SEÇÃO CONTATO (TERMINAL)
+   6. SEÇÃO CONTATO
 ========================================= */
 #contato { background: transparent; padding-bottom: 100px; }
 
@@ -350,16 +342,16 @@ nav ul { list-style: none; display: flex; gap: 20px; }
 .cyber-footer p { color: #444; font-family: 'Share Tech Mono', monospace; font-size: 0.8rem; }
 .neon-name { color: var(--neon-purple); text-shadow: 0 0 10px var(--neon-purple); }
 
-/* Matrix Canvas Fixo */
+
 #matrixCanvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Coloquei 1 para garantir que fique acima da cor base do body */
-    opacity: 0.2; /* Um pouco mais visível */
-    pointer-events: none; /* Deixa clicar nos itens que estão por cima */
+    z-index: 1; 
+    opacity: 0.2; 
+    pointer-events: none; 
 }
 
 /* Responsividade Mobile */
@@ -376,27 +368,27 @@ nav ul { list-style: none; display: flex; gap: 20px; }
    EXTRAS: SCROLLBAR, PRELOADER & CURSOR
 ========================================= */
 
-/* 1. SCROLLBAR PERSONALIZADO (Chrome, Edge, Safari) */
+/* 1. SCROLLBAR PERSONALIZADO */
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #02050a; /* Cor do fundo da trilha */
+    background: #02050a; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--neon-purple); /* Cor da barra */
+    background: var(--neon-purple); 
     border-radius: 4px;
-    box-shadow: 0 0 10px var(--neon-purple); /* Brilho neon */
+    box-shadow: 0 0 10px var(--neon-purple);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--neon-blue); /* Muda de cor ao passar o mouse */
+    background: var(--neon-blue); 
     box-shadow: 0 0 15px var(--neon-blue);
 }
 
-/* Compatibilidade Firefox */
+
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--neon-purple) #02050a;
@@ -410,7 +402,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
     width: 100%;
     height: 100%;
     background-color: #000;
-    z-index: 9999; /* Fica acima de TUDO */
+    z-index: 9999; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -459,7 +451,7 @@ nav ul { list-style: none; display: flex; gap: 20px; }
     animation: fadeInUp 0.5s forwards;
 }
 
-/* Animação dos logs aparecendo um por um */
+
 .loader-logs p:nth-child(1) { animation-delay: 0.5s; }
 .loader-logs p:nth-child(2) { animation-delay: 1.0s; }
 .loader-logs p:nth-child(3) { animation-delay: 1.5s; }
@@ -476,9 +468,9 @@ nav ul { list-style: none; display: flex; gap: 20px; }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 3. CURSOR HACKER */
+/* 3. CURSOR */
 body {
-    cursor: none; /* Esconde o cursor padrão do Windows */
+    cursor: none; 
 }
 
 /* Ponto Central */
@@ -491,7 +483,7 @@ body {
     top: 0;
     left: 0;
     z-index: 10000;
-    pointer-events: none; /* Permite clicar através dele */
+    pointer-events: none; 
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px var(--neon-blue);
 }
@@ -520,11 +512,11 @@ body.hovering .cursor-outline {
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
 }
 /* =========================================
-   SEÇÃO SKILLS (MODO PERFORMANCE - "SYSTEM MODULES")
+   SEÇÃO SKILLS 
 ========================================= */
 
 #skills {
-    /* Fundo levemente escurecido para contraste, sem imagem pesada */
+    
     background: rgba(2, 5, 10, 0.95); 
     padding-bottom: 80px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -538,18 +530,18 @@ body.hovering .cursor-outline {
     max-width: 1200px;
 }
 
-/* O Módulo do Sistema */
+
 .sys-module {
-    /* Cor sólida com transparência = MUITO leve para processar */
+   
     background: rgba(20, 25, 35, 1); 
     border: 1px solid #333;
-    border-left: 3px solid var(--neon-blue); /* Detalhe colorido sutil */
+    border-left: 3px solid var(--neon-blue); 
     padding: 20px;
     position: relative;
-    transition: transform 0.2s ease; /* Animação simples */
+    transition: transform 0.2s ease; 
 }
 
-/* Hover leve: Apenas sobe um pouco, sem sombras gigantes */
+
 .sys-module:hover {
     transform: translateY(-3px);
     border-color: var(--neon-blue);
@@ -601,7 +593,7 @@ body.hovering .cursor-outline {
     font-family: monospace;
 }
 
-/* Rodapé do Status (Estilo Terminal) */
+/* Rodapé do Status */
 .sys-status {
     margin-top: 15px;
     font-size: 0.7rem;
@@ -611,7 +603,7 @@ body.hovering .cursor-outline {
     opacity: 0.8;
 }
 
-/* Responsividade: Garante que não quebre em telas muito pequenas */
+/* Responsividade */
 @media (max-width: 400px) {
     .system-grid {
         grid-template-columns: 1fr;
